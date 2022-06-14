@@ -1,0 +1,107 @@
+/*Importing styles into css file*/
+/*@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
+/* Apply below styles to all elements in the page*/
+*{
+    font-family: 'Raleway', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;/*removes underline from anchor tag*/
+    overflow: hidden;
+    scroll-behavior: smooth;
+
+}
+/*style header menu*/
+.header{
+    position: fixed;/*makes menu fixed if scrolling down*/
+    top: 0;
+    left: 0;
+    right: 0;
+    /*background:rgb(67, 115, 67);*/
+    height: 65px;
+    z-index: 100; /*Header menu is raised like a 3d view*/
+}
+
+.header .nav_bar{
+    display: flex; /*makes items inside move*/
+}
+.header .nav_bar a{
+    flex:1; /*Anchor tags take equal space*/
+    text-align: center;/*Align text to center in anchors*/
+    font-size: 22px;
+    line-height: 65px;
+    color: aliceblue;
+
+}
+/*apply psuedo selector hover and change the brightness*/
+.header .nav_bar a:hover{
+    filter:brightness(0.8) ;
+}
+
+.header .nav_bar a:nth-child(1){
+    background: rgb(158, 18, 18);
+
+}
+.header .nav_bar a:nth-child(2){
+    background: rgb(29, 197, 138);
+
+}
+.header .nav_bar a:nth-child(3){
+    background: rgb(142, 18, 158);
+
+}
+.header .nav_bar a:nth-child(4){
+    background: rgb(200, 77, 20);
+
+}
+.header .nav_bar a:nth-child(5){
+    background: rgb(18, 121, 158);
+
+}
+/*Style the main body section */
+.container{
+    display: flex;
+    width: 500%;
+    height: 100vh;
+}
+.container .main-section{
+    display: flex;
+    width: 20%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 8vw;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-weight: bold;
+    color:azure ;
+}
+.container .main-section:nth-child(1){
+    background: rgb(158, 18, 18);
+
+}
+.container .main-section:nth-child(2){
+    background: rgb(29, 197, 138);
+
+}
+.container .main-section:nth-child(3){
+    background: rgb(142, 18, 158);
+
+}
+.container .main-section:nth-child(4){
+    background: rgb(200, 77, 20);
+
+}
+.container .main-section:nth-child(5){
+    background: rgb(18, 121, 158);
+
+}
+
+/*Apply media queries to adjust for different devices - make it responsive*/
+@media (max-width: 750px){
+    .header .nav_bar a span{
+        display: none; 
+    }
+}
